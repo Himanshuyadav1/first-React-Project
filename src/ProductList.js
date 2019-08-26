@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import TotalCash from './TotalCash';
+import ProductForm from './ProductForm';
 
 class ProductList extends Component{
 
@@ -23,6 +24,7 @@ class ProductList extends Component{
 
         return (
             <div>
+                <ProductForm />
                 {this.state.productList.map(({name, price}) => 
                     <Product name={name} price={price} show={this.showProduct} cash={this.calculateTotal} />
                                   
