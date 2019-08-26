@@ -1,9 +1,10 @@
 import React from 'react';
 
-const TotalCash = () => {
+
+const TotalCash = (props) => {
     return (
         <div>
-            <h1>TotalCash: $</h1>
+            <h1>TotalCash: ${props.total}</h1>
         </div>
     )
 }
