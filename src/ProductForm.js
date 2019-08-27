@@ -17,6 +17,8 @@ class ProductForm extends Component{
         console.log(e.target.getElementsByTagName("input")[0].value);
         e.target.getElementsByTagName("input")[0].value = "";
         e.target.getElementsByTagName("input")[1].value = "";
+        console.log(this.props.product);
+        this.props.product.push({name: this.state.name, price: this.state.price}); 
     }
 
     render() {

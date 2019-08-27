@@ -24,7 +24,7 @@ class ProductList extends Component{
 
         return (
             <div>
-                <ProductForm />
+                <ProductForm product={this.state.productList}/>
                 {this.state.productList.map(({name, price}) => 
                     <Product name={name} price={price} show={this.showProduct} cash={this.calculateTotal} />
                                   
