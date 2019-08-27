@@ -20,11 +20,15 @@ class ProductList extends Component{
         this.setState({ total: this.state.total + price });
     }
 
-    render() {
+    addProduct = product => {
+        this.state.productList.push(product);
+        this.setState({productList: this.state.productList});
+    } 
 
+    render() {        
         return (
             <div>
-                <ProductForm product={this.state.productList}/>
+                <ProductForm newProduct={this.addProduct}/>
                 {this.state.productList.map(({name, price}) => 
                     <Product name={name} price={price} show={this.showProduct} cash={this.calculateTotal} />
                                   

@@ -13,12 +13,12 @@ class ProductForm extends Component{
     handleForm = e => {
         e.preventDefault();
         alert(`Product Name: ${this.state.name} - Price: $${this.state.price}`);
-        console.log(`Product Name: ${this.state.name} - Price: $${this.state.price}`);
-        console.log(e.target.getElementsByTagName("input")[0].value);
+        // console.log(`Product Name: ${this.state.name} - Price: $${this.state.price}`);
+        // console.log(e.target.getElementsByTagName("input")[0].value);
         e.target.getElementsByTagName("input")[0].value = "";
         e.target.getElementsByTagName("input")[1].value = "";
-        console.log(this.props.product);
-        this.props.product.push({name: this.state.name, price: this.state.price}); 
+        // console.log(this.props.product);
+        this.props.newProduct({name: this.state.name, price: parseInt(this.state.price)}); 
     }
 
     render() {
